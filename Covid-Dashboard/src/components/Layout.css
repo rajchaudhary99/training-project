@@ -1,0 +1,11 @@
+.layout {
+ max-width: 100%;
+  margin-left:45px ;
+}
+
+.main-content {
+  max-width: 100%;
+  padding-bottom:20px;
+  background-color: #f4f7fc;
+  min-height: 100vh;
+}

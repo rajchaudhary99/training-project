@@ -1,0 +1,53 @@
+.logout-botton {
+  position: fixed; 
+  bottom: 20px; 
+  left: -6px; 
+  padding: 10px 20px;
+  color: rgb(66, 66, 66);
+  font-size: 22px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip-text {
+  visibility: hidden;
+  font-size: 16px; /* Increased font size for label */
+  color: #535353;
+  font-weight: 600; /* Bold text for a modern look */
+  position: absolute;
+  left: 100%;
+  margin-left: 15px; /* Space between icon and label */
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 7px 12px; /* Padding for the label to look like a tooltip */
+  border-radius: 8px; /* Rounded corners */
+  background: #fafafa; /* Dark background for the tooltip */
+  box-shadow: 2px 2px 8px rgba(88, 88, 88, 0.3); /* Shadow for depth */
+  white-space: nowrap; /* Prevent label from wrapping */
+  font-family: 'Arial', sans-serif; /* Modern font */
+  font-size: 14px; /* Slightly smaller font for the label */
+  pointer-events: none; /* Prevent the tooltip from blocking clicks */
+  z-index: 10; 
+}
+
+
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0); /* Animate label from the right */
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.logout-botton i:hover {
+  color: #ff4081; 
+}

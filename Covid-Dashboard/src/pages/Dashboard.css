@@ -1,0 +1,105 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dashboard-container {
+  background-color: #f4f7fa;
+   width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  position: relative;
+
+}
+
+.dashboard-title::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 305px;
+  height: 3.5px;
+  border-radius: 2px;
+  background: linear-gradient(130deg, #c300ff, #00ffea 41.07%, #e7036dab 76.05%);
+  z-index: 0;
+}
+
+.dashboard-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+/* Chart Container */
+.chart-container {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px;
+}
+
+.chart-box {
+  flex: 1;
+  max-width: 45%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.chart-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Information Box */
+.info-box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.info-box h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.info-box p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 27px;
+  }
+
+  .chart-box {
+    flex: 0 0 100%; 
+    max-width: 100%;
+  }
+  .dashboard-subtitle {
+    font-size: 1.15rem;
+  }
+  .dashboard-title::after {
+    width: 275px;
+  }
+}

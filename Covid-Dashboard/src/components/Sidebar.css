@@ -1,0 +1,93 @@
+/* Sidebar Container */
+.sidebar {
+background: #fafafa;
+  width: 45px; /* Sidebar width */
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 0; /* Adjust padding */
+  z-index: 1;
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+/* List Styling */
+.sidebar ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* List Item */
+.sidebar li {
+  margin-bottom: 20px; /* Increase margin for spacing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.3s ease-in-out; /* Adds subtle hover effect */
+}
+
+/* Anchor Link */
+/* Anchor Link */
+.sidebar a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  padding: 12px;
+  border-radius: 50%; /* Round the edges for a modern look */
+  width: 40px; /* Set a fixed width for better centering */
+  height: 40px; /* Set a fixed height to make the container circular */
+  position: relative;
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for anchor link */
+.sidebar a:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 0 80px rgba(223, 221, 221, 0.2);
+}
+
+/* Icon Styling */
+.sidebar i {
+  font-size: 21px; /* Slightly larger icon */
+  color: #333; /* Default icon color */
+  transition: color 0.3s ease; /* Icon color change on hover */
+}
+
+.sidebar span {
+  display: none;
+  font-size: 16px; /* Increased font size for label */
+  color: #535353;
+  font-weight: 600; /* Bold text for a modern look */
+  position: absolute;
+  left: 100%;
+  margin-left: 15px; /* Space between icon and label */
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 7px 12px; /* Padding for the label to look like a tooltip */
+  border-radius: 8px; /* Rounded corners */
+  background: #fafafa; /* Dark background for the tooltip */
+  box-shadow: 2px 2px 8px rgba(88, 88, 88, 0.3); /* Shadow for depth */
+  white-space: nowrap; /* Prevent label from wrapping */
+  font-family: 'Arial', sans-serif; /* Modern font */
+  font-size: 14px; /* Slightly smaller font for the label */
+  pointer-events: none; /* Prevent the tooltip from blocking clicks */
+  z-index: 10; /* Make sure it appears above everything else */
+}
+
+.sidebar li:hover span {
+  display: inline-block;
+  opacity: 1;
+  transform: translateX(0); /* Animate label from the right */
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Icon and label color on hover */
+.sidebar li:hover i {
+  color: #ff4081; /* Icon color change */
+}
+

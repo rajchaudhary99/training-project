@@ -1,0 +1,206 @@
+/* General Style for the Chart Section */
+* {
+    color: rgb(255, 238, 0);
+}
+
+.chart-section-container {
+    margin-top: 20px;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 55px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Responsive Grid for Flexibility */
+.chart-section-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center align items on smaller screens */
+}
+
+.chart-section-col {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Allow columns to shrink or grow */
+}
+
+/* Price Chart */
+.price-chart {
+    width: 100%; /* Ensure the chart takes full width */
+    height: 100%; /* Allow height to adjust dynamically */
+    padding: 10px 0px 0px 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    position: relative; /* Position the chart container */
+}
+
+/* Price Tag */
+.priceTag {
+    width: 100%; /* Make sure price tag takes full width */
+    height: auto; /* Dynamic height adjustment */
+}
+
+/* Chart Card */
+.chart-card {
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Toolbar Buttons */
+.chart-toolbar {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chart-btn {
+    padding: 5px 15px;
+    margin: 0 5px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 1px solid #fcdf03;
+    background-color: transparent;
+    color: #fcdf03;
+    transition: all 0.3s ease;
+}
+
+.chart-btn:hover {
+    background-color: #fcdf03;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Info Cards */
+.info-cards {
+    max-width: 230px;
+    gap: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+}
+
+.info-card {
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.info-card-title {
+    color: #fcdf03;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.info-card-value {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Additional Charts */
+.additional-charts {
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+}
+
+/* Responsive Design with Media Queries */
+@media screen and (max-width: 768px) {
+    .chart-section-container {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    /* Price Chart Section for Small Screens */
+    .price-chart {
+        width: 100%;
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    .priceTag {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Info Cards and Additional Charts */
+    .info-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    .info-card {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .additional-charts {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    /* Layout Change for Smaller Screens (Price Chart Above Other Charts) */
+    .chart-section-row {
+        display: flex;
+        flex-direction: column; /* Stack the charts */
+        align-items: center; /* Center align the items */
+    }
+
+    .chart-section-col .price-chart {
+        width: 100%; /* Ensure full-width chart on small screens */
+        margin-bottom: 10px; /* Add space below price chart */
+    }
+
+    .chart-section-col.info-cards,
+    .chart-section-col.additional-charts {
+        width: 100%; /* Ensure full-width for info cards and additional charts */
+    }
+
+    /* Make info cards and additional charts stack */
+    .info-cards,
+    .additional-charts {
+        margin-bottom: 20px;
+    }
+}
+
+/* For very small screens (below 480px) */
+@media screen and (max-width: 480px) {
+    .chart-btn {
+        font-size: 12px;
+        padding: 5px 10px;
+        margin: 3px;
+    }
+
+    .info-card-value {
+        font-size: 12px;
+    }
+
+    .chart-section-container {
+        padding: 10px;
+    }
+
+    .info-cards {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 8px;
+    }
+
+    .info-card {
+        padding: 8px;
+    }
+
+    .additional-charts {
+        padding: 8px;
+    }
+}

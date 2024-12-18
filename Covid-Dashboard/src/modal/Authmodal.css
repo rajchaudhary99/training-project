@@ -1,0 +1,187 @@
+/* AuthModal.css */
+
+/* Overlay styling */
+.login-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content styling */
+.login-modal-content {
+  background-color: #fff; /* White background */
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Close button styling */
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Header styling */
+.login-modal-content h2 {
+  font-size: 24px;
+  color: #535353;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Input fields styling */
+.modal-input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+/* Submit button styling */
+.modal-submit-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: hotpink;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for submit button */
+.modal-submit-button:hover {
+  background-color: #ff1e92;
+}
+
+/* Toggle link styling */
+.toggle-link {
+  color: grey;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.google{
+  display: flex;
+}
+.google i{
+  position: relative;
+  bottom: 32px;
+  color: #a0a0a0;
+  top: 13px;
+  left: 11px;
+}
+
+.google-signin-button {
+  color: rgb(132, 132, 132);
+  padding: 10px 23px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.google-signin-button:focus {
+  outline: none;
+}
+
+.google-signin-button img {
+  margin-right: 10px; /* Space between the icon and text */
+}
+
+.google-signin-button .google-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.auth-outer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f7fb; /* Light background for a clean look */
+  padding: 20px;
+  text-align: center;
+}
+
+.auth-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #363636;
+  margin-bottom: 20px;
+}
+
+.auth-message {
+  font-size: 18px;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 30px;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.open-close-modal-button {
+  background-color: hotpink; /* Google blue color */
+  color: white;
+  padding: 11px 22px;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.open-close-modal-button:hover {
+  background-color: #eb338c; /* Darker blue on hover */
+}
+
+.open-close-modal-button:focus {
+  outline: none;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  
+.open-close-modal-button {
+  padding: 11px 18px;
+}
+  .modal-input-field {
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  .modal-submit-button {
+    font-size: 14px;
+  }
+}

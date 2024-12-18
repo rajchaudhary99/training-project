@@ -1,0 +1,29 @@
+/* Responsive Design for Small Screens */
+@media screen and (max-width: 768px) {
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+
+    .navbar-brand {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .navbar-brand img {
+        margin-right: 10px;
+    }
+
+    .form-select {
+        width: 250px; /* Increase width of dropdown on small screens */
+        text-align: center; /* Center the text */
+    }
+
+    /* Align dropdown in the center for small screens */
+    .container-fluid > div {
+       left: 50%;
+        width: 50%;
+    }
+}

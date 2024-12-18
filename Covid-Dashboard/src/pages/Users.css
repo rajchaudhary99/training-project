@@ -1,0 +1,295 @@
+.page-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main-page-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  position: relative; /* Necessary for positioning the underline */
+  display: flex;
+}
+
+.main-page-title::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 319px;
+  left: 0;
+  height: 3.5px;
+  border-radius: 2px;
+  background: linear-gradient(
+    130deg,
+    #c300ff,
+    #00ffea 41.07%,
+    #e7036dab 76.05%
+  );
+}
+
+.country-select-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.covid-text {
+  margin-right: 10px;
+  font-weight: bold; /* Add bold font weight for emphasis */
+}
+.symbol {
+  padding-left: 12px;
+  font-size: 13px;
+}
+.dropdown-container {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.dropdown-toggle {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 8px;
+  color: rgb(69, 69, 69);
+  padding: 10px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.dropdown-menu {
+  position: absolute;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 8px;
+  width: 172px;
+  border-radius: 8px;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.dropdown-menu li {
+  color: rgb(77, 77, 77);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+.dropdown-menu li:hover {
+  
+  background-color: rgba(220, 220, 220, 0.281);
+  border-radius: 5px;
+  color: rgb(41, 41, 41);
+}
+
+.covid-text {
+  margin-right: 10px;
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 18px;
+}
+
+.stats-box {
+
+  justify-content: space-between;
+  min-width: 47%;
+  height: 353px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+ min-width:50%;
+ 
+}
+canvas{
+  width: 380px;
+}
+.stat-item {
+  margin-top: 15px;
+}
+
+.doughnut-chart-container {
+  display: flex;
+  justify-content: space-between;
+  min-width: 47%;
+  height: 353px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+ min-width:50%;
+}
+
+.notification-preferences h3,
+.stats-box h3,
+.covid-resources h3 {
+  color: black;
+  font-size: 24px;
+}
+
+.notification-preferences,
+.covid-resources {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  padding: 20px;
+}
+.notification-preferences label {
+  padding-right: 20px;
+}
+
+.notification-item {
+  margin-bottom: 10px;
+}
+/* Container for checkbox and label */
+.checkbox-wrapper-17 {
+  display: flex;
+  align-items: center; /* Aligns the toggle switch and label text horizontally */
+  margin-top: 10px; /* Adds some space between rows */
+}
+
+.checkbox-wrapper-17 input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden; /* Hide the default checkbox */
+}
+
+.checkbox-wrapper-17 label {
+  --size: 38px; /* Set the toggle size */
+  cursor: pointer;
+  width: var(--size);
+  height: calc(var(--size) / 2);
+  background: #dcdcdc; /* Light grey background for the switch */
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  margin-right: 10px; /* Space between the switch and the text */
+}
+
+.checkbox-wrapper-17 label:after {
+  content: "";
+  position: absolute;
+  top: 6%;
+  left: 2.5%;
+  width: calc(50% - 5%);
+  height: calc(100% - 11%);
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+.checkbox-wrapper-17 input:checked + label {
+  background: #00ff8885; /* Blue background when checked */
+}
+
+.checkbox-wrapper-17 input:checked + label:after {
+  left: calc(100% - 2.5%);
+  transform: translateX(-100%);
+}
+
+.checkbox-wrapper-17 label:active:after {
+  width: 55%; /* Smooth effect when clicked */
+}
+
+.notification-text {
+  font-size: 1rem;
+  color: #333; /* Text color for labels */
+  font-weight: 500;
+  display: inline-block; /* Ensures the text stays inline */
+  vertical-align: middle; /* Keeps the text aligned with the toggle */
+}
+
+.resource-list {
+  list-style: none;
+  padding: 0;
+}
+.arrow{
+  color: #09dee5;
+}
+.resource-link {
+  text-decoration: none;
+  color: #000000; /* Dark text color for contrast */
+  font-size: 0.97rem;
+  position: relative;
+  padding: 2px 0px;
+  display: inline-block;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: white; /* White background */
+}
+
+.resource-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #00bcd4; /* Accent color */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.resource-link:hover {
+  color: #00bcd4; /* Accent color for the text on hover */
+  background-color: #f8f8f8; /* Light gray background on hover */
+  border-color: #00bcd4; /* Change border color on hover */
+}
+
+.resource-link:hover::before {
+  transform-origin: bottom left;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-container {
+    max-width: 100%;
+  }
+  .stats-container {
+    flex-direction: column;
+  }
+  .stat-item {
+    margin-top: 10px;
+  }
+  .main-page-title {
+    font-size: 27px;
+  }
+  .main-page-title::after {
+    width: 289px;
+  }
+  
+
+  .stats-box,
+  .doughnut-chart-container {
+    width: 100%;
+    flex: 1 -1 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .dropdown-toggle {
+    font-size: 15px;
+    min-width: 160px;
+  }
+  .dropdown-menu {
+    width: 164px;
+  }
+  .dropdown-menu li {
+    font-size: 14.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-page-title::after {
+    width: 288px;
+  }
+}
